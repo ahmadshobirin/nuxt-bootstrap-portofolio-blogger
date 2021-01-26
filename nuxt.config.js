@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  // target: 'server',
+  target: 'static',
 
   ssr:true,
   purgeCSS: {
@@ -57,7 +57,9 @@ export default {
     '@nuxtjs/toast',
     '@nuxtjs/svg',
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    ['bootstrap-vue/nuxt',{
+      icons: false
+    }],
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
   ],
@@ -97,6 +99,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    babel: {
+      compact: true
+    }
     
   }
 }
