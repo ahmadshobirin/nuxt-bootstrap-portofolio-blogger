@@ -31,8 +31,8 @@
   
   .dark-mode {
     --white: #343a40;
-    --dark: #f8f9fa;
     --light: #343a40;
+    --dark: #f8f9fa;
     --color: #ebf4f1;
     --color-secondary: #fdf9f3;
     --bg: #091a28;

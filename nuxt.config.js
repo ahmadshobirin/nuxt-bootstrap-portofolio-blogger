@@ -7,7 +7,7 @@ export default {
     whitelist: ["dark-mode"]
   },
   head: {
-    title: 'Gubug Digital',
+    title: 'Gubug Fajar',
     htmlAttrs: {
       lang: 'en'
     },
@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Fajar Firmansyah Profile' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
     ]
   },
 
@@ -57,12 +57,33 @@ export default {
     '@nuxtjs/toast',
     '@nuxtjs/svg',
     // https://go.nuxtjs.dev/bootstrap
-    ['bootstrap-vue/nuxt',{
-      icons: false
-    }],
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
   ],
+  bootstrapVue: {
+    icons: false,
+    bootstrapVue: {
+      components: [
+        'BContainer', 
+        'BRow', 
+        'BCol', 
+        'BFormInput', 
+        'BButton', 
+        'BTable', 
+        'BModal',
+        // 'BNavbar',
+        'BNavbarBrand',
+        'BNavbarNav',
+        'BNavItem',
+        'BJumbroton',
+        'BImg',
+        'BMedia'
+      ],
+      directives: [
+        // 'VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy'
+      ]
+    }
+  },
   fontawesome: {
     icons: {
       solid: true
@@ -71,6 +92,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'bootstrap-vue/nuxt'
   ],
 
   auth: {
@@ -99,9 +121,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    babel: {
-      compact: true
-    }
+    // babel: {
+    //   compact: true
+    // }
     
   }
 }

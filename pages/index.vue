@@ -9,9 +9,11 @@
       class="shadow-sm p-3 mb-5 rounded"
     >
       <b-navbar-brand href="https://t.me/firmansyah2018" style="font-family:monospace;">
-        <font-awesome-icon :icon="['fas', 'code']" /> Fajar Firmansyah
+        <font-awesome-icon :icon="['fas', 'code']" />
+        <!-- <b-img src="~/assets/img/logoV1.png" width="40" rounded fluid alt="Fajar Firmansyah" /> -->
+        Fajar Firmansyah
       </b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse" />
+      <b-navbar-toggle target="nav-collapse" class="text-white" />
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto" style="font-size:16px;">
@@ -48,12 +50,12 @@
 
           <template #lead>
             <span class="primary shadow-sm">
-              I am a backend developer.<br> I hate web-styling, but I love pretty-page</span>
+              I am a programmer.<br> I have a good life.</span>
           </template>
 
           <hr class="my-4" style="width:60%">
 
-          <p>For more information contact me</p>
+          <p>Yuk Kenalan,</p>
           <b-button variant="primary" href="https://t.me/firmansyah2018">
             Contact Me <font-awesome-icon :icon="['fas', 'paper-plane']" />
           </b-button>
@@ -72,7 +74,7 @@
             rekan-rekan baik yang memiliki <i>hobby</i> sama yakni dunia IT maupun yang bukan. Semuanya sangat memberi warna
             dan inspirasi bagi saya.<br><br>
             Besar harapan saya selain berkenalan melalui gubug digital ini, tentu juga pertemuan di dunia nyata dengan rekan-rekan yang baik. Bergaul, bertukar fikiran, berbagi informasi, ilmu pengetahuan, dan pekerjaan adalah hal-hal yang sangat menyenangkan.<br><br>
-            Jangan lupa add contact di bawah ya gan. Semoga saling menjadi inspirasi satu sama lain ya. Salam Super!
+            Jangan lupa <i>add contact</i> di bawah ya gan. Semoga saling menjadi inspirasi satu sama lain ya. Salam Super!
           </p>
         </b-col>
       </b-row>
@@ -80,10 +82,8 @@
       <b-row id="pengalaman" style="margin-top:3%" class="px-3">
         <b-col md="6 shadow-sm">
           <h5 class="text-left" style="font-weight:bold;">
-            <font style="text-decoration:underline;">
-              Pengalaman
-            </font>
-            <font-awesome-icon class="text-primary ml-1" :icon="['fas', 'user-check']" />
+            <font style="text-decoration:underline;">Pengalaman</font>
+            <font-awesome-icon class="ml-1" :icon="['fas', 'user-check']" />
           </h5>
           <ul class="list-unstyled">
             <b-media tag="li">
@@ -107,7 +107,7 @@
                 Database
               </h5>
               <p class="mb-0">
-                PostgreSQL, MySQL, Mongo DB, Hadoop, Apache-Hbase
+                SQL-PL/SQL (PostgreSQL, MySQL), Mongo DB, Hadoop, Apache-Hbase
               </p>
             </b-media>
 
@@ -120,7 +120,7 @@
                 Frontend
               </h5>
               <p class="mb-0">
-                Vanilla JS, JQuery, Vue/Nuxt JS, Ext JS
+                Vanilla JS, JQuery, Vue/Nuxt JS, Ext JS, Java Android, Flutter
               </p>
             </b-media>
 
@@ -133,7 +133,7 @@
                 OS Administration
               </h5>
               <p class="mb-0">
-                Linux OS, VPS, Docker, Networking, Proxy, Load Balancer
+                Linux OS, VPS, Docker, Virtualisasi, Networking
               </p>
             </b-media>
 
@@ -162,10 +162,8 @@
             <div class="col-md-9">
               <b-media right-align vertical-align="center">
                 <h5 class="text-right" style="font-weight:bold;">
-                  <font style="text-decoration:underline;">
-                    Tentang Saya
-                  </font>
-                  <font-awesome-icon class="text-primary ml-1" :icon="['fas', 'user-tag']" />
+                  <font style="text-decoration:underline;">Tentang Saya</font>
+                  <font-awesome-icon class="ml-1" :icon="['fas', 'user-tag']" />
                 </h5>
                 <p class="text-justify" style="font-family:monospace; font-size:15px;">
                   <b>S</b>aya dilahirkan di Kota Kediri pada 04 Maret 1993 yang dititipkan Tuhan kepada kedua orang tua yang sangat saya cintai. Sejak kecil saya senang menonton film bertajuk teknologi, termasuk komputer. Dimulai dari ajakan teman untuk bermain game-online sejak SMP, kenyamanan berinteraksi dengan teman-teman sesama pecinta hal-hal tentang komputer sangat saya nikmati. Hingga pada akhirnya Tuhan mengizinkan saya memiliki profesi sebagai programmer. Saya selalu belajar kepada siapa dan apapun yang saya temui, karena belajar adalah hal yang menyenangkan. Saya bersyukur selalu dikelilingi oleh orang-orang yang selalu menginsipirasi saya tentang kebaikan.
@@ -215,27 +213,29 @@
 <script>
 export default {
   auth: false,
-  computed:{
-    variantNavComputed(){
-      if(this.$colorMode.preference === 'dark'){
-        return 'dark';
-      }
-      if(this.$colorMode.preference === 'light'){
-        return this.scrolled==='up'? 'primary':'light';
-      }
-    },
-    typeNavComputed(){
-      if(this.$colorMode.preference === 'dark'){
-        return this.scrolled==='up'? 'white':'white';
-      }
-      if(this.$colorMode.preference === 'light'){
-        return this.scrolled==='down'? 'light':'dark';
-      }
-    }
-  },
   data () {
     return {
       scrolled: 'up'
+    }
+  },
+  computed: {
+    variantNavComputed () {
+      if (this.$colorMode.preference === 'dark') {
+        return 'dark'
+      }
+      if (this.$colorMode.preference === 'light') {
+        return this.scrolled === 'up' ? 'primary' : 'white'
+      }
+      return 'dark'
+    },
+    typeNavComputed () {
+      if (this.$colorMode.preference === 'dark') {
+        return this.scrolled === 'up' ? 'white' : 'white'
+      }
+      if (this.$colorMode.preference === 'light') {
+        return this.scrolled === 'down' ? 'light' : 'dark'
+      }
+      return 'light'
     }
   },
   mounted () {
@@ -249,7 +249,7 @@ export default {
       this.$colorMode.preference = this.$colorMode.preference === 'dark' ? 'light' : 'dark'
     },
     handleScroll (e) {
-      this.scrolled = window.scrollY === 0 ? 'up':'down';
+      this.scrolled = window.scrollY === 0 ? 'up' : 'down'
     },
     logout () {
       this.$auth.logout('google')
