@@ -25,6 +25,7 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12",
+    "nuxt-compress": "^4.1.0",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-validate": "^1.0.1",
     "nuxt-vue-select": "^0.1.4"

@@ -49,6 +49,7 @@
           </template>
 
           <template #lead>
+            <h1 style="display:none">Fajar Firmansyah</h1>
             <span class="primary shadow-sm">
               I am a programmer.<br> I have a good life.</span>
           </template>
@@ -235,7 +236,7 @@ export default {
       if (this.$colorMode.preference === 'light') {
         return this.scrolled === 'down' ? 'light' : 'dark'
       }
-      return 'light'
+      return 'white'
     }
   },
   mounted () {

@@ -7,14 +7,14 @@ export default {
     whitelist: ["dark-mode"]
   },
   head: {
-    title: 'Gubug Fajar',
+    title: 'Fajar Firmansyah',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Fajar Firmansyah Profile' }
+      { hid: 'description', name: 'description', content: 'Fajar Firmansyah' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' }
@@ -63,6 +63,7 @@ export default {
     '@nuxtjs/toast',
     '@nuxtjs/svg',
     'bootstrap-vue/nuxt',
+    "nuxt-compress",
     // https://go.nuxtjs.dev/bootstrap
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
