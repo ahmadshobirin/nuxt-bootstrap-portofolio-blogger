@@ -67,6 +67,9 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
   ],
+  bootstrapVue:{
+    icons:false
+  },
   fontawesome: {
     icons: {
       solid: true

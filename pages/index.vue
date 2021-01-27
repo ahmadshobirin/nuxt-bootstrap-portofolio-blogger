@@ -226,7 +226,7 @@ export default {
       if (this.$colorMode.preference === 'light') {
         return this.scrolled === 'up' ? 'primary' : 'white'
       }
-      return 'dark'
+      return 'primary'
     },
     typeNavComputed () {
       if (this.$colorMode.preference === 'dark') {
