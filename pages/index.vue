@@ -29,6 +29,9 @@
           <b-nav-item href="#kontak">
             <span :class="$route.fullPath.includes('#kontak')?'bg-primary text-white rounded p-2':''">Kontak</span>
           </b-nav-item>
+          <b-nav-item href="https://blog.fajarfirmansyah.com">
+            <span>Blog</span>
+          </b-nav-item>
           <b-nav-item @click="darkModeSwitch">
             <font-awesome-icon
               :icon="['fas', $colorMode.preference === 'dark'?'sun':'moon']"
@@ -49,7 +52,9 @@
           </template>
 
           <template #lead>
-            <h1 style="display:none">Fajar Firmansyah Programmer</h1>
+            <h1 style="display:none">
+              Fajar Firmansyah Programmer
+            </h1>
             <span class="primary shadow-sm">
               I am a programmer.<br> I have a good life.</span>
           </template>
@@ -83,7 +88,9 @@
       <b-row id="pengalaman" style="margin-top:3%" class="px-3">
         <b-col md="6 shadow-sm">
           <h5 class="text-left" style="font-weight:bold;">
-            <font style="text-decoration:underline;">Pengalaman</font>
+            <font style="text-decoration:underline;">
+              Pengalaman
+            </font>
             <font-awesome-icon class="ml-1" :icon="['fas', 'user-check']" />
           </h5>
           <ul class="list-unstyled">
@@ -163,7 +170,9 @@
             <div class="col-md-9">
               <b-media right-align vertical-align="center">
                 <h5 class="text-right" style="font-weight:bold;">
-                  <font style="text-decoration:underline;">Tentang Saya</font>
+                  <font style="text-decoration:underline;">
+                    Tentang Saya
+                  </font>
                   <font-awesome-icon class="ml-1" :icon="['fas', 'user-tag']" />
                 </h5>
                 <p class="text-justify" style="font-family:monospace; font-size:15px;">

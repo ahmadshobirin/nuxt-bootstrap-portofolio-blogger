@@ -14,13 +14,66 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Fajar Firmansyah Programmer' }
+      { hid: 'description', name: 'description', content: 'Fajar Firmansyah' },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: "Fajar Firmansyah"
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "Fajar Firmansyah"
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: "Fajar Firmansyah Programmer"
+      },
+      {
+        hid: 'og:locale',
+        property: 'og:locale',
+        content: "id"
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: "https://fajarfirmansyah.com"
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: "website"
+      },
+
+      {
+        hid: 'profile:first_name',
+        property: 'profile:first_name',
+        content: "Fajar"
+      },
+      {
+        hid: 'profile:last_name',
+        property: 'profile:last_name',
+        content: "Firmansyah"
+      },
+      {
+        hid: 'profile:username',
+        property: 'profile:username',
+        content: "starlight93"
+      },
+      {
+        hid: 'profile:gender',
+        property: 'profile:gender',
+        content: "male"
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' }
     ]
   },
-
+  colorMode: {
+    preference: 'light',
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/main.css'],
 
@@ -77,7 +130,7 @@ export default {
     }
   },
   googleAnalytics: {
-    id: 'G-P952EWBMHB'
+    id: 'UA-188222023-1'
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -91,7 +144,8 @@ export default {
       google: {
         clientId: '151605242378-49qph0ne24v09af4f3933b9ikd5mkgj2.apps.googleusercontent.com',
         codeChallengeMethod: '',
-        redirectUri:"http://localhost:3000"
+        redirectUri:"http://localhost:3000",
+        // scope: ["openid", "profile", "email"]
       }
     },
     redirect: {
