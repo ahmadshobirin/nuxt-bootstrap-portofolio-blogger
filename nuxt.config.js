@@ -33,9 +33,9 @@ export default {
   sitemap: {
     hostname: 'https://fajarfirmansyah.com',
     gzip: true,
-    routes: [
-      '/'
-    ]
+    // routes: [
+    //   '/'
+    // ]
   },
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
