@@ -30,11 +30,17 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
+  sitemap: {
+    hostname: 'https://fajarfirmansyah.com',
+    gzip: true,
+    routes: [
+      '/'
+    ]
+  },
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    // '@nuxtjs/sitemap',
+    '@nuxtjs/sitemap',
     ['@nuxtjs/eslint-module',{fix:true} ],
     ['nuxt-vue-select', { /* module options */ }],
     ['nuxt-fontawesome', {
@@ -56,34 +62,11 @@ export default {
     '@nuxtjs/auth-next',
     '@nuxtjs/toast',
     '@nuxtjs/svg',
+    'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/bootstrap
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
   ],
-  bootstrapVue: {
-    icons: false,
-    bootstrapVue: {
-      components: [
-        'BContainer', 
-        'BRow', 
-        'BCol', 
-        'BFormInput', 
-        'BButton', 
-        'BTable', 
-        'BModal',
-        // 'BNavbar',
-        'BNavbarBrand',
-        'BNavbarNav',
-        'BNavItem',
-        'BJumbroton',
-        'BImg',
-        'BMedia'
-      ],
-      directives: [
-        // 'VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy'
-      ]
-    }
-  },
   fontawesome: {
     icons: {
       solid: true
@@ -92,7 +75,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'bootstrap-vue/nuxt'
   ],
 
   auth: {
@@ -121,9 +103,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    // babel: {
-    //   compact: true
-    // }
+    babel: {
+      compact: true
+    }
     
   }
 }
