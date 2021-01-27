@@ -49,7 +49,7 @@
           </template>
 
           <template #lead>
-            <h1 style="display:none">Fajar Firmansyah</h1>
+            <h1 style="display:none">Fajar Firmansyah Programmer</h1>
             <span class="primary shadow-sm">
               I am a programmer.<br> I have a good life.</span>
           </template>

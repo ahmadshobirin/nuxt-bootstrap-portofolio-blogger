@@ -7,14 +7,14 @@ export default {
     whitelist: ["dark-mode"]
   },
   head: {
-    title: 'Fajar Firmansyah',
+    title: "Fajar Firmansyah Programmer",
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Fajar Firmansyah' }
+      { hid: 'description', name: 'description', content: 'Fajar Firmansyah Programmer' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' }
@@ -55,7 +55,7 @@ export default {
         }
       ]
     }],
-    
+    '@nuxtjs/google-analytics',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',    
     '@nuxtjs/axios',
@@ -76,7 +76,9 @@ export default {
       solid: true
     }
   },
-
+  googleAnalytics: {
+    id: 'G-P952EWBMHB'
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
