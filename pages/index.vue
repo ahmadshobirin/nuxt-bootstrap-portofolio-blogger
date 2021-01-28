@@ -12,6 +12,9 @@
         <font-awesome-icon :icon="['fas', 'code']" />
         <!-- <b-img src="~/assets/img/logoV1.png" width="40" rounded fluid alt="Fajar Firmansyah" /> -->
         Fajar Firmansyah
+            <h1 style="display:none">
+              Fajar Firmansyah Programmer
+            </h1>
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" class="text-white" />
       <b-collapse id="nav-collapse" is-nav>
@@ -20,16 +23,16 @@
           <b-nav-item href="#home">
             <span :class="$route.fullPath.includes('#home')?'bg-white text-dark rounded p-2':''">Home</span>
           </b-nav-item>
-          <b-nav-item href="#tentang">
-            <span :class="$route.fullPath.includes('#tentang')?'bg-primary text-white rounded p-2':''">Tentang</span>
-          </b-nav-item>
           <b-nav-item href="#pengalaman">
             <span :class="$route.fullPath.includes('#pengalaman')?'bg-primary text-white rounded p-2':''">Pengalaman</span>
+          </b-nav-item>
+          <b-nav-item href="#tentang">
+            <span :class="$route.fullPath.includes('#tentang')?'bg-primary text-white rounded p-2':''">Tentang</span>
           </b-nav-item>
           <b-nav-item href="#kontak">
             <span :class="$route.fullPath.includes('#kontak')?'bg-primary text-white rounded p-2':''">Kontak</span>
           </b-nav-item>
-          <b-nav-item href="https://blog.fajarfirmansyah.com">
+          <b-nav-item to="posts">
             <span>Blog</span>
           </b-nav-item>
           <b-nav-item @click="darkModeSwitch">
@@ -52,9 +55,6 @@
           </template>
 
           <template #lead>
-            <h1 style="display:none">
-              Fajar Firmansyah Programmer
-            </h1>
             <span class="primary shadow-sm">
               I am a programmer.<br> I have a good life.</span>
           </template>
@@ -164,7 +164,7 @@
         </b-col>
       </b-row>
 
-      <div id="tentang" style="margin-top:30px;margin-bottom:10px;padding:0px 10px 0px 10px;" class="shadow-sm">
+      <div id="tentang" style="margin-top:30px;margin-bottom:20px;padding:0px 10px 0px 10px;" class="shadow-sm">
         <b-card class="text-center" :bg-variant="$colorMode.preference === 'dark'?'dark':'white'">
           <b-row>
             <div class="col-md-9">
@@ -222,7 +222,7 @@
 
 <script>
 export default {
-  auth: false,
+  layout:'none',
   data () {
     return {
       scrolled: 'up'

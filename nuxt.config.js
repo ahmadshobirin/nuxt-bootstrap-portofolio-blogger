@@ -6,6 +6,12 @@ export default {
   purgeCSS: {
     whitelist: ["dark-mode"]
   },
+  env:{
+    blogger:{
+      id:"8820681713503677308",
+      key:"AIzaSyCHYxb99q00_skTtSqqWzcrzjHRQgeYRhY"
+    }
+  },
   head: {
     title: "Fajar Firmansyah Programmer",
     htmlAttrs: {
@@ -135,8 +141,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
-
-  auth: {
+  auth:false,
+  auths: {
     token: {
       prefix: 'auth.'
     },
