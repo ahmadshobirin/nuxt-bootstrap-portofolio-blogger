@@ -8,7 +8,7 @@ export default {
   },
   env:{
     blogger:{
-      id:"8820681713503677308",
+      id:"8820681713503677308",//"1309320265504420965",
       key:"AIzaSyCHYxb99q00_skTtSqqWzcrzjHRQgeYRhY"
     }
   },
@@ -91,17 +91,14 @@ export default {
   components: true,
   sitemap: {
     hostname: 'https://fajarfirmansyah.com',
-    gzip: true,
-    // routes: [
-    //   '/'
-    // ]
+    gzip: true
   },
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/sitemap',
     ['@nuxtjs/eslint-module',{fix:true} ],
-    ['nuxt-vue-select', { /* module options */ }],
+    // ['nuxt-vue-select', { /* module options */ }],
     ['nuxt-fontawesome', {
       imports: [
         {
@@ -118,14 +115,13 @@ export default {
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',    
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
+    // '@nuxtjs/auth-next',
     '@nuxtjs/toast',
     '@nuxtjs/svg',
     'bootstrap-vue/nuxt',
     "nuxt-compress",
     // https://go.nuxtjs.dev/bootstrap
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
   ],
   bootstrapVue:{
     icons:false
@@ -141,26 +137,26 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
-  auth:false,
-  auths: {
-    token: {
-      prefix: 'auth.'
-    },
-    strategies: {
-      google: {
-        clientId: '151605242378-49qph0ne24v09af4f3933b9ikd5mkgj2.apps.googleusercontent.com',
-        codeChallengeMethod: '',
-        redirectUri:"http://localhost:3000",
-        // scope: ["openid", "profile", "email"]
-      }
-    },
-    redirect: {
-      login: '/login',
-      logout: '/',
-      callback: '/login',
-      home: '/'
-    },
-  },
+  // auth:false,
+  // auths: {
+  //   token: {
+  //     prefix: 'auth.'
+  //   },
+  //   strategies: {
+  //     google: {
+  //       clientId: '151605242378-49qph0ne24v09af4f3933b9ikd5mkgj2.apps.googleusercontent.com',
+  //       codeChallengeMethod: '',
+  //       redirectUri:"http://localhost:3000",
+  //       // scope: ["openid", "profile", "email"]
+  //     }
+  //   },
+  //   redirect: {
+  //     login: '/login',
+  //     logout: '/',
+  //     callback: '/login',
+  //     home: '/'
+  //   },
+  // },
   router: {
     // middleware: ['auth'],
   },

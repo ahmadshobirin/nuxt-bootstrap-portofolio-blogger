@@ -17,7 +17,7 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto" style="font-size:16px;">
           <b-nav-item to="/">
-            <span>Kembali</span>
+            <span>Home</span>
           </b-nav-item>
           <b-nav-item @click="darkModeSwitch">
             <font-awesome-icon
@@ -30,12 +30,7 @@
     <main class="container-fluid">
       <Nuxt keep-alive :keep-alive-props="{ exclude: ['modal'] }"/>
     </main>
-    <footer id="kontak" class="mt-5">
-      <h5 class="text-center" style="font-weight:bold;">
-        <font style="text-decoration:underline;">
-          Kontak
-        </font>
-      </h5>
+    <footer id="kontak" class="mt-5">      
       <p class="text-center text-lg">
         <a target="_blank" href="https://t.me/firmansyah2018">
           <font-awesome-icon class="m-2 fa-lg text-primary" :icon="['fab','telegram']" />
