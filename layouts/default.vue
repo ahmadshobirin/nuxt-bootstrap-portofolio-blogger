@@ -28,7 +28,7 @@
       </b-collapse>
     </b-navbar>
     <main class="container-fluid">
-      <Nuxt keep-alive :keep-alive-props="{ exclude: ['modal'] }"/>
+      <Nuxt keep-alive :nuxt-child-key="$route.fullPath"/>
     </main>
     <footer id="kontak" class="mt-5">      
       <p class="text-center text-lg">

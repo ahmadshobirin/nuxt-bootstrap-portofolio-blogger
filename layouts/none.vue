@@ -1,11 +1,12 @@
 <template>
   <div>
-      <Nuxt keep-alive :nuxt-child-key="$route.fullPath" />
+      <Nuxt keep-alive :key="$route.fullPath" />
   </div>
 </template>
 
 <script>
 export default {
+
 }
 </script>
 
