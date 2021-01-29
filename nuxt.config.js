@@ -8,33 +8,36 @@ export default {
   },
   env:{
     blogger:{
-      id:"8820681713503677308",//"1309320265504420965",
-      key:"AIzaSyCHYxb99q00_skTtSqqWzcrzjHRQgeYRhY"
+      id:"8820681713503677308", //change with your blog id
+      key:"AIzaSyCHYxb99q00_skTtSqqWzcrzjHRQgeYRhY" //change with your public key
     }
   },
+  googleAnalytics: {
+    id: 'UA-188222023-1' //change with yours
+  },
   head: {
-    title: "Fajar Firmansyah Programmer",
+    title: "Fajar Firmansyah",
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Fajar Firmansyah' },
+      { hid: 'description', name: 'description', content: 'Fajar Firmansyah djafar_aloha starlight93 firmansyah93 programmer developer' },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: "Fajar Firmansyah"
+        content: "Fajar Firmansyah djafar_aloha starlight93 firmansyah93 programmer developer"
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: "Fajar Firmansyah"
+        content: "Fajar Firmansyah djafar_aloha starlight93 firmansyah93 programmer developer"
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: "Fajar Firmansyah Programmer"
+        content: "Fajar Firmansyah djafar_aloha starlight93 firmansyah93 programmer developer"
       },
       {
         hid: 'og:locale',
@@ -65,7 +68,7 @@ export default {
       {
         hid: 'profile:username',
         property: 'profile:username',
-        content: "starlight93"
+        content: "djafar_aloha"
       },
       {
         hid: 'profile:gender',
@@ -80,25 +83,20 @@ export default {
   colorMode: {
     preference: 'light',
   },
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  
   css: ['@/assets/main.css'],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
   sitemap: {
     hostname: 'https://fajarfirmansyah.com',
     gzip: true
   },
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/sitemap',
     ['@nuxtjs/eslint-module',{fix:true} ],
-    // ['nuxt-vue-select', { /* module options */ }],
     ['nuxt-fontawesome', {
       imports: [
         {
@@ -113,15 +111,10 @@ export default {
     }],
     '@nuxtjs/google-analytics',
     '@nuxtjs/color-mode',
-    '@nuxtjs/google-fonts',    
     '@nuxtjs/axios',
-    // '@nuxtjs/auth-next',
-    '@nuxtjs/toast',
     '@nuxtjs/svg',
     'bootstrap-vue/nuxt',
-    "nuxt-compress",
-    // https://go.nuxtjs.dev/bootstrap
-    // https://go.nuxtjs.dev/axios
+    "nuxt-compress"
   ],
   bootstrapVue:{
     icons:false
@@ -131,43 +124,13 @@ export default {
       solid: true
     }
   },
-  googleAnalytics: {
-    id: 'UA-188222023-1'
-  },
-  // Modules: https://go.nuxtjs.dev/config-modules
+  
   modules: [
   ],
-  // auth:false,
-  // auths: {
-  //   token: {
-  //     prefix: 'auth.'
-  //   },
-  //   strategies: {
-  //     google: {
-  //       clientId: '151605242378-49qph0ne24v09af4f3933b9ikd5mkgj2.apps.googleusercontent.com',
-  //       codeChallengeMethod: '',
-  //       redirectUri:"http://localhost:3000",
-  //       // scope: ["openid", "profile", "email"]
-  //     }
-  //   },
-  //   redirect: {
-  //     login: '/login',
-  //     logout: '/',
-  //     callback: '/login',
-  //     home: '/'
-  //   },
-  // },
-  router: {
-    // middleware: ['auth'],
-  },
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
       compact: true
-    }
-    
+    }    
   }
 }

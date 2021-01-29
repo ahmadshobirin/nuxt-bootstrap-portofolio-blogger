@@ -28,9 +28,9 @@
       </b-collapse>
     </b-navbar>
     <main class="container-fluid">
-      <Nuxt keep-alive :nuxt-child-key="$route.fullPath"/>
+      <Nuxt />
     </main>
-    <footer id="kontak" class="mt-5">      
+    <footer id="kontak" class="mt-5">
       <p class="text-center text-lg">
         <a target="_blank" href="https://t.me/firmansyah2018">
           <font-awesome-icon class="m-2 fa-lg text-primary" :icon="['fab','telegram']" />
@@ -39,13 +39,13 @@
           <font-awesome-icon class="m-2 fa-lg text-success" :icon="['fab','whatsapp']" />
         </a>
         <a target="_blank" href="https://www.facebook.com/firmansyah.fajar">
-          <font-awesome-icon class="m-2 fa-lg" :icon="['fab','facebook-square']" />
+          <font-awesome-icon class="m-2 fa-lg text-primary" :icon="['fab','facebook-square']" />
         </a>
         <a target="_blank" href="https://www.instagram.com/firmansyah_2017">
           <font-awesome-icon class="m-2 fa-lg text-danger" :icon="['fab','instagram']" />
         </a>
         <a target="_blank" href="mailto: mail.firmansyah93@gmail.com">
-          <font-awesome-icon class="m-2 fa-lg text-primary" :icon="['fab','google']" />
+          <font-awesome-icon class="m-2 fa-lg text-success" :icon="['fab','google']" />
         </a>
       </p>
       <p class="text-center text-underlined">
@@ -67,6 +67,9 @@ export default {
     }
   },
   computed: {
+  key(route){
+    return route.fullPath
+  },
     variantNavComputed () {
       if (this.$colorMode.preference === 'dark') {
         return 'dark'

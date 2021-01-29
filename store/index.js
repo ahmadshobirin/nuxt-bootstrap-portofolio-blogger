@@ -2,7 +2,9 @@ export const state = () => ({
   blogPost: {
     items: []
   },
-  allPosts:[]
+  allPosts:[],
+  currentPage:1,
+  totalRows:1
 })
 
 export const mutations = {

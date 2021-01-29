@@ -56,7 +56,7 @@
     </b-row>
     <div class="text-center mt-2">
       <b-pagination
-        v-model="value"
+        :value="currentPage"
         :total-rows="totalRows"
         :per-page="1"
         first-text="First"
@@ -81,11 +81,16 @@ export default {
   scrollToTop: false,
   data () {
     return {
-      value: 1,
-      totalRows: 1
+
     }
   },
   computed: {
+    currentPage () {
+      return this.$store.state.currentPage
+    },
+    totalRows () {
+      return this.$store.state.totalRows
+    },
     blogger () {
       return process.env.blogger
     },
@@ -95,12 +100,13 @@ export default {
     }
   },
   created () {
-    this.getPosts()
   },
   mounted () {
+    this.getPosts()
   },
   methods: {
     change (input) {
+      this.$store.commit('set', ['currentPage', input])
       this.getPosts(input)
     },
     async getPosts (page = false) {
@@ -126,7 +132,8 @@ export default {
       }
       this.$store.commit('set', ['blogPost', { nextPageToken: this.$store.state.blogPost.nextPageToken, items: [] }])
       const posts = await this.$axios.$get(formattedUrl)
-      this.totalRows = posts.nextPageToken === undefined ? this.value : this.value + 1
+      const totalRows = posts.nextPageToken === undefined ? this.currentPage : (this.currentPage + 1)
+      this.$store.commit('set', ['totalRows', totalRows])
       this.$store.commit('set', ['blogPost', posts])
       const allPosts = JSON.parse(JSON.stringify(this.$store.state.allPosts))
       allPosts.push(posts)

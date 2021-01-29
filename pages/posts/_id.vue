@@ -1,8 +1,8 @@
 <template>
 <div>
-    <b-overlay :show="html===''" rounded="sm">
-    <post-read :html="html" :title="title" :time="time" />
-    <Fab > 
+    <b-overlay :show="html===''" rounded="sm" class="h-100">
+        <post-read :html="html" :title="title" :time="time" />
+        <Fab > 
             <!-- Defines FAB buttons icon -->
             <template #icon><font-awesome-icon :icon="['fas', 'th-large']" /> </template>
             <!-- Defines Fab button options -->
@@ -16,7 +16,7 @@
             </template> 
             <template slot="option2">
                 <b-tooltip target="fab-back-btn" title="Kembali" class="d-none"></b-tooltip>
-                <span  title="Kembali" pill id="fab-back-btn" @click="$router.push('/posts')">
+                <span  title="Kembali" pill id="fab-back-btn" @click="$router.go(-1)">
                     <font-awesome-icon class="fa-lg"
                     :icon="['fas', 'arrow-circle-left']"
                     />
@@ -25,11 +25,11 @@
         </Fab>
         <template #overlay>
         <div class="text-center mt-5" style="height:100%">
-          <font-awesome-icon class="fa-lg" :icon="['fas', 'clock']" />
-          <p id="cancel-label">Page is being loaded...</p>
+            <font-awesome-icon class="fa-lg" :icon="['fas', 'clock']" />
+            <p id="cancel-label">Page is being loaded...</p>
         </div>
-      </template>
-      </b-overlay>
+        </template>
+    </b-overlay>
 </div>
 </template>
 
@@ -51,7 +51,6 @@ export default {
         },
     },
     created(){
-        // this.readPost();
     },
     mounted(){
         this.readPost();

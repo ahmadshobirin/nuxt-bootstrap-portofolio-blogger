@@ -1,6 +1,6 @@
 <template>
   <div>
-      <Nuxt keep-alive :key="$route.fullPath" />
+    <Nuxt :key="$route.fullPath" keep-alive />
   </div>
 </template>
 

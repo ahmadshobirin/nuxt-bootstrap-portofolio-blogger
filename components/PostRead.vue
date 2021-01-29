@@ -3,7 +3,7 @@
     <b-card :bg-variant="$colorMode.preference === 'dark'?'dark':'white'">
         <p class='text-center mb-3 font-weight-bold'>{{title}}</p>
         <p v-html="html" style="width:100%" />
-        <p class='text-center mt-1'><small>Updated at: {{time}}</small></p>
+        <p class='text-center mt-0' v-if="html!==''"><small>Updated at: {{time}}</small></p>
     </b-card>
   </div>
 </template>
